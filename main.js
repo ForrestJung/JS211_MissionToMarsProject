@@ -27,8 +27,6 @@ class CrewMember {
   }
 }
 
-
-
 // Class that includes name, type, ability and empty crew on instantiation
 class Ship {
   constructor(name, type, ability){
@@ -38,6 +36,9 @@ class Ship {
     this.crew = [];
   }
 
+  // Returns a mission statement correctly
+  // Check to see if there is crew assigned. If not return "Can't perform a mission yet."
+  // Otherwise return the ability of the ship
   missionStatement () {
     if (this.crew.length == 0) {
       return "Can't perform a mission yet."
@@ -48,9 +49,7 @@ class Ship {
   }
 }
 
-// Returns a mission statement correctly
-// Check to see if there is crew assigned. If not return "Can't perform a mission yet."
-// Otherwise return the ability of the ship
+
 
 
 
