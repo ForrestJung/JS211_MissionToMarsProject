@@ -12,7 +12,45 @@ const jobTypes = {
 // Your code will go here
 
 
+// Class that inclueds name, job, specialSkill and ship for new crew members
+class CrewMember {
+  constructor(name, job, specialSkill, ship){
+    this.name = name;
+    this.job = job;
+    this.specialSkill = specialSkill;
+    this.ship = ship;
+  }
+  // Method to have crew member assigned to a ship
+  enterShip(boat) {
+    this.ship = boat;
+    this.ship.crew.push(this);
+  }
+}
 
+
+
+// Class that includes name, type, ability and empty crew on instantiation
+class Ship {
+  constructor(name, type, ability){
+    this.name = name;
+    this.type = type;
+    this.ability = ability;
+    this.crew = [];
+  }
+
+  missionStatement () {
+    if (this.crew.length == 0) {
+      return "Can't perform a mission yet."
+
+    } else {
+      return this.ability
+    }
+  }
+}
+
+// Returns a mission statement correctly
+// Check to see if there is crew assigned. If not return "Can't perform a mission yet."
+// Otherwise return the ability of the ship
 
 
 
